@@ -1,0 +1,30 @@
+*****************************************************
+*** JSON DE CONFIGURAÇÃO AINDA A SER IMPLEMENTADA ***
+*****************************************************
+
+{
+    "windowDimensions": {
+        "width": 1024,
+        "height": 576
+    },
+    "gravity": 0.2,
+    "playerStatus": {
+        "life": 100,
+        "initialPosition": {
+            "x": 100,
+            "y": 0
+        }
+    },
+    "floorHeight": 80,
+    "desiredFPS": 120,
+
+    "keys": {
+        "left": "a",
+        "alternativeLeft": "ArrowLeft",
+        "right": "d",
+        "alternativeRight": "ArrowRight",
+        "jump": "w",
+        "alternativeJump": " ",
+        "basicAttack": "j"
+    }
+}
