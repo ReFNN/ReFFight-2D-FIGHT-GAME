@@ -7,9 +7,8 @@ const backgroundSpritePath =
 const defaultObjectSpritePath = "../assets/imgs/objects/square.svg";
 
 class Sprite {
-    constructor({ position, velocity, source, scale, offset, sprites }) {
+    constructor({ position, source, scale, offset, sprites }) {
         this.position = position;
-        this.velocity = velocity;
 
         this.scale = scale || 1;
         this.image = new Image();
@@ -198,7 +197,7 @@ class Fighter extends Sprite {
 
         setTimeout(() => {
             this.isAttacking = false;
-        }, 400);
+        }, 300);
 
         setTimeout(() => {
             this.onAttackCooldown = false;
@@ -213,7 +212,7 @@ class Fighter extends Sprite {
 
 const player = new Fighter({
     position: {
-        x: 100,
+        x: 800,
         y: 0,
     },
     velocity: {
@@ -224,13 +223,13 @@ const player = new Fighter({
     sprites: {
         idle: {
             src: "../assets/imgs/player/idle.png",
-            totalSpriteFrames: 11,
-            framesPerSpriteFrame: 18,
+            totalSpriteFrames: 4,
+            framesPerSpriteFrame: 25,
         },
         running: {
             src: "../assets/imgs/player/running.png",
-            totalSpriteFrames: 10,
-            framesPerSpriteFrame: 8,
+            totalSpriteFrames: 6,
+            framesPerSpriteFrame: 15,
         },
         jumping: {
             src: "../assets/imgs/player/jumping.png",
@@ -238,16 +237,16 @@ const player = new Fighter({
             framesPerSpriteFrame: 8,
         },
         attacking: {
-            src: "../assets/imgs/player/attacking.png",
-            totalSpriteFrames: 7,
+            src: "../assets/imgs/player/attacking2.png",
+            totalSpriteFrames: 6,
             framesPerSpriteFrame: 8,
         },
     },
 });
 
-const player2 = new Fighter({
+const enemy = new Fighter({
     position: {
-        x: 500,
+        x: 300,
         y: 0,
     },
     velocity: {
@@ -258,13 +257,13 @@ const player2 = new Fighter({
     sprites: {
         idle: {
             src: "../assets/imgs/player/idle.png",
-            totalSpriteFrames: 11,
-            framesPerSpriteFrame: 18,
+            totalSpriteFrames: 4,
+            framesPerSpriteFrame: 25,
         },
         running: {
             src: "../assets/imgs/player/running.png",
-            totalSpriteFrames: 10,
-            framesPerSpriteFrame: 8,
+            totalSpriteFrames: 6,
+            framesPerSpriteFrame: 15,
         },
         jumping: {
             src: "../assets/imgs/player/jumping.png",
@@ -284,5 +283,6 @@ const background = new Sprite({
         x: 0,
         y: 0,
     },
+    scale: 1,
     source: backgroundSpritePath,
 });

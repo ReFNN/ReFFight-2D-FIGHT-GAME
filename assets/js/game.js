@@ -24,10 +24,11 @@ function animate() {
     while (lag >= frameTime) {
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        // ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
         background.update();
         player.update();
-        player2.update();
+        enemy.update();
 
         lag -= frameTime;
     }
